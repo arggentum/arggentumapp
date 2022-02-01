@@ -1,0 +1,7 @@
+{
+  "name": "arggentumapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
