@@ -1,11 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-
 import { PageLoginPageRoutingModule } from './page-login-routing.module';
-
 import { PageLoginPage } from './page-login.page';
 
 @NgModule({
@@ -13,7 +10,8 @@ import { PageLoginPage } from './page-login.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PageLoginPageRoutingModule
+    PageLoginPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [PageLoginPage]
 })

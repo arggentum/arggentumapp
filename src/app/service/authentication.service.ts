@@ -12,21 +12,20 @@ export class AuthenticationService {
     private router: Router) { }
 
   public loginEmailAndPassword(usuarioModel: any) {
+    console.log(usuarioModel);
     this.angularFireAuth.signInWithEmailAndPassword(usuarioModel.email, usuarioModel.senha).then( ()=> {
       localStorage.setItem("TOKEN", "true");
       this.router.navigate(["page-dashboard"]);
     }, error => {
       console.error("Erro ao tentar realizar o login do usuário!");
-      this.router.navigate(["page-login"]);
     });
   }
 
   public createEmailAndPassword(usuarioModel: any) {
     this.angularFireAuth.createUserWithEmailAndPassword(usuarioModel.email, usuarioModel.senha).then( ()=> {
-      this.router.navigate(["page-login"]);
+
     }, error => {
       console.error(error.message);
-      this.router.navigate(["page-sigin"]);
     });
   }
 

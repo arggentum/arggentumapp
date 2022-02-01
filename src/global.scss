@@ -15,7 +15,12 @@
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: "Poppins-Light";
+  src: url("./assets/font/Poppins/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
   src: url("./assets/font/Poppins/Poppins-Medium.ttf");
 }
 
@@ -30,5 +35,11 @@
 }
 
 * {
-  font-family: "Poppins";
+  font-family: "Poppins-Light";
+}
+
+ion-button {
+  height: 40px;
+  text-transform: initial;
+  --background: linear-gradient(90deg, #0099DE, #004F8E);
 }
