@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "argentumapp-14016": {
+      "hosting": {
+        "app": [
+          "argentumapp-14016"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "argentumapp-14016"
+  }
+}
