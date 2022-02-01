@@ -9,7 +9,7 @@
 
     ARGGENTUM-01022022102808
 
-      - [] Implementar integração com Firebase
-      - [] Implementar autenticação com E-mail e Senha
-      - [] Implementar Tela de Welcome, LogIn e SigIn
+- [x] Implementar integração com Firebase
+- [x] Implementar autenticação com E-mail e Senha
+- [x] Implementar Tela de Welcome, LogIn e SigIn
 
