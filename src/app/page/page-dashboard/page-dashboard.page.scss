@@ -1,0 +1,33 @@
+ion-header {
+  ion-toolbar {
+    --background: #2C4CBB;
+    color: #FFFFFF;
+  }
+}
+
+ion-content {
+  --background: #DCDEE1;
+  header {
+    background: #2C4CBB;
+    height: 300px;
+    margin-top: -10px;
+  }
+  .container {
+    padding: 20px;
+    ion-card {
+      --color: #000000;
+      border-radius: 20px;
+    }
+  }
+  .saldo-corrente {
+    font-size: 18px;
+  }
+  .valor-saldo-corrente {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .descricao-lancamento {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
