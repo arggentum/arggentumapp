@@ -2,10 +2,11 @@ ion-content {
     --background: #000000;
     --color: #FFFFFF;
     h1 {
-      margin-top: 80px;
-      font-size: 28px;
+      margin-top: 60px;
+      font-size: 34px;
+      font-family: "Poppins-Bold";
     }
-    ion-button:nth-last-child(1) {
-      margin-top: 10px;
+    ion-button {
+      margin-top: 14px;
     }
 }
