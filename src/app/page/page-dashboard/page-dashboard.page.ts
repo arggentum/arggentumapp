@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, ToastController } from '@ionic/angular';
 import { ReceitaCadastrarPage } from './../page-receita/receita-cadastrar/receita-cadastrar.page';
 
 @Component({
@@ -11,9 +11,12 @@ export class PageDashboardPage implements OnInit {
 
   constructor(
     private modalController: ModalController,
+    private toastController: ToastController,
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.hideToastController();
+  }
 
   public async openModalReceitas() {
     const modalReceita = await this.modalController.create({
@@ -22,6 +25,10 @@ export class PageDashboardPage implements OnInit {
       initialBreakpoint: 0.6
     });
     return await modalReceita.present();
+  }
+
+  private async hideToastController() {
+    return await this.toastController.dismiss();
   }
 
 }

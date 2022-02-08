@@ -1,11 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-
 import { ReceitaCadastrarPageRoutingModule } from './receita-cadastrar-routing.module';
-
 import { ReceitaCadastrarPage } from './receita-cadastrar.page';
 
 @NgModule({
@@ -13,7 +10,8 @@ import { ReceitaCadastrarPage } from './receita-cadastrar.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ReceitaCadastrarPageRoutingModule
+    ReceitaCadastrarPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [ReceitaCadastrarPage]
 })

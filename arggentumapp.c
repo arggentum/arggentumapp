@@ -30,3 +30,11 @@
     ARGGENTUM-04022022183743
 
 - Criar o menu lateral esquerdo com seu ícone
+
+    ARGGENTUM-07022022222221
+
+- Implementar tela de Cadastro Rápido de Receitas (via modal)
+
+    ARGGENTUM-08022022132116
+
+- Implementar cadastro rápido de Despesas (via modal)
