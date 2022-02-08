@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'page-transferencia',
     loadChildren: () => import('./page/page-transferencia/page-transferencia.module').then( m => m.PageTransferenciaPageModule)
   },
+  {
+    path: 'tablemenu',
+    loadChildren: () => import('./component/tablemenu/tablemenu.module').then( m => m.TablemenuPageModule)
+  },
 
 ];
 

@@ -9,6 +9,7 @@ import { DespesaCadastrarPage } from '../page-despesa/despesa-cadastrar/despesa-
   styleUrls: ['./page-dashboard.page.scss'],
 })
 export class PageDashboardPage implements OnInit {
+
   constructor(
     private modalController: ModalController,
     private toastController: ToastController
