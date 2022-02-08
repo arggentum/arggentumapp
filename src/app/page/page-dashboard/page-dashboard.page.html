@@ -1,15 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button routerLink="/page-welcome" routerDirection="back">
-        <ion-img src="../../../assets/back.svg"></ion-img>
-      </ion-button>
+      <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
-    <ion-label class="ion-text-center">
-      <h1 style="margin-left: -60px;">Arggentum</h1>
-    </ion-label>
-    <ion-buttons slot="end">
-    </ion-buttons>
+    <div style="margin-left: 24%; font-family: 'Inter'; font-weight: bold; font-size: 20px;">
+      <ion-text>Arggentum</ion-text>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -34,7 +30,7 @@
             <div class="divisor"></div>
             <ion-row class="ion-text-center">
               <ion-col>
-                <ion-button color="primary">
+                <ion-button (click)="openModalReceitas()" color="primary">
                   <ion-icon name="return-down-forward-outline"></ion-icon>
                 </ion-button>
                 <ion-label class="descricao-lancamento">Receitas</ion-label>

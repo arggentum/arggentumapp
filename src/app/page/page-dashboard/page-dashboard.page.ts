@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ReceitaCadastrarPage } from './../page-receita/receita-cadastrar/receita-cadastrar.page';
 
 @Component({
   selector: 'app-page-dashboard',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageDashboardPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalController: ModalController,
+  ) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public async openModalReceitas() {
+    const modalReceita = await this.modalController.create({
+      component: ReceitaCadastrarPage,
+      swipeToClose: true,
+      initialBreakpoint: 0.6
+    });
+    return await modalReceita.present();
   }
 
 }
