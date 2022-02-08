@@ -1,11 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-
 import { PageReceitaPageRoutingModule } from './page-receita-routing.module';
-
 import { PageReceitaPage } from './page-receita.page';
 
 @NgModule({
@@ -13,7 +10,8 @@ import { PageReceitaPage } from './page-receita.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PageReceitaPageRoutingModule
+    PageReceitaPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [PageReceitaPage]
 })

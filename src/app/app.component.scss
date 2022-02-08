@@ -13,6 +13,7 @@ ion-toolbar {
 .perfil-usuario {
     font-weight: bold;
     color: #93919A;
+    font-size: 12px;
 }
 
 ion-grid {
@@ -57,4 +58,16 @@ ion-grid {
             }
         }
     }
+}
+
+footer {
+  ion-item {
+      b {
+        margin-left: 10px;
+      }
+  }
+}
+
+.fonte-menu {
+  font-size: 12px;
 }

@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>despesa-cadastrar</ion-title>
-  </ion-toolbar>
+  <ion-item-divider>
+    <ion-toolbar>
+      <ion-text>Cadastrar Despesa</ion-text>
+    </ion-toolbar>
+  </ion-item-divider>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+  <form [formGroup]="formulario" (ngSubmit)="createOne()">
+
+    <ion-item>
+      <ion-label position="floating">Favorecido</ion-label>
+      <ion-input type="text" name="favorecido" formControlName="favorecido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Produto ou Serviço</ion-label>
+      <ion-input type="text" name="produtoservico" formControlName="produtoservico"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Valor Total</ion-label>
+      <ion-input type="text" name="valortotal" formControlName="valortotal"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block">Cadastrar</ion-button>
+
+  </form>
 
 </ion-content>
