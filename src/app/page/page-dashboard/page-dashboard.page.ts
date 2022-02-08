@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, ToastController } from '@ionic/angular';
-import { ReceitaCadastrarPage } from './../page-receita/receita-cadastrar/receita-cadastrar.page';
+import { AuthenticationService } from '../../service/authentication.service';
 import { DespesaCadastrarPage } from '../page-despesa/despesa-cadastrar/despesa-cadastrar.page';
+import { ReceitaCadastrarPage } from './../page-receita/receita-cadastrar/receita-cadastrar.page';
 
 @Component({
   selector: 'app-page-dashboard',
@@ -10,13 +11,18 @@ import { DespesaCadastrarPage } from '../page-despesa/despesa-cadastrar/despesa-
 })
 export class PageDashboardPage implements OnInit {
 
+  public isUsuarioLogado: boolean = false;
+
   constructor(
     private modalController: ModalController,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private authenticationService: AuthenticationService
   ) {}
 
   ngOnInit() {
     this.hideToastController();
+    this.findToken();
+    this.usuarioLogado()
   }
 
   public async openModalReceitas() {
@@ -53,7 +59,21 @@ export class PageDashboardPage implements OnInit {
     return toastController.present();
   }
 
+  public findToken() {
+    const token = this.authenticationService.findToken();
+    if(token == null) {
+      this.isUsuarioLogado = false;
+    }
+  }
+
+  public usuarioLogado() {
+    this.isUsuarioLogado = this.authenticationService.usuarioLogado();
+    console.log("usuarioLogado....", this.authenticationService.usuarioLogado());
+    return this.authenticationService.usuarioLogado();
+  }
+
   private async hideToastController() {
     return await this.toastController.dismiss();
   }
+
 }

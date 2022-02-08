@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
@@ -12,7 +12,7 @@ import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-confi
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy, Router } from '@angular/router';
+import { Router, RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -41,11 +41,15 @@ import { AppComponent } from './app.component';
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, ScreenTrackingService,UserTrackingService],
   bootstrap: [AppComponent],
 })
-export class AppModule {
+export class AppModule implements OnInit {
+
+  public isUsuarioLogado: boolean = false;
 
   constructor(
     private router: Router
   ) {}
+
+  ngOnInit() { }
 
   public encerrarSessao() {
     return this.router.navigate(["page-dashboard"]);
