@@ -38,3 +38,7 @@
     ARGGENTUM-08022022132116
 
 - Implementar cadastro rápido de Despesas (via modal)
+
+    ARGGENTUM-08022022192306
+
+- Implementar tab menu
