@@ -39,13 +39,10 @@ export class AuthenticationService {
       );
   }
 
-  public signOut(usuarioModel: any) {
-    this.angularFireAuth.signOut().then(
-      () => {
+  public signOut() {
+    this.angularFireAuth.signOut().then( () => {
         localStorage.removeItem('TOKEN');
-        this.router.navigate(['page-login']);
-      },
-      (error) => {
+      }, (error) => {
         console.error(error.message);
       }
     );

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/service/authentication.service';
 
 @Component({
   selector: 'app-page-welcome',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageWelcomePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authenticationService: AuthenticationService
+  ) { }
 
   ngOnInit() {
+    console.log("Encerrando Login do Usuário....");
+    this.encessarSessaoUsuario();
+  }
+
+  public encessarSessaoUsuario() {
+    this.authenticationService.signOut();
   }
 
 }
