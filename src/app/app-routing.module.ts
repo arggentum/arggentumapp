@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'page-receita',
     loadChildren: () => import('./page/page-receita/page-receita.module').then( m => m.PageReceitaPageModule)
-  },  {
+  },
+  {
     path: 'page-despesa',
     loadChildren: () => import('./page/page-despesa/page-despesa.module').then( m => m.PageDespesaPageModule)
   },
@@ -38,7 +39,6 @@ const routes: Routes = [
     path: 'tablemenu',
     loadChildren: () => import('./component/tablemenu/tablemenu.module').then( m => m.TablemenuPageModule)
   },
-
 ];
 
 @NgModule({
